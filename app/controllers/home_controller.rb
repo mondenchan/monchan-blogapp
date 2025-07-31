@@ -1,0 +1,9 @@
+class HomeController < ApplicationController
+  def index
+    @title = 'デイトラ'
+    # This action will render the home page of the application.
+    # You can add any logic here if needed.
+  end
+  def about
+  end
+end
