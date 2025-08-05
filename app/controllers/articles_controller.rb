@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
   def index
-    @article = Article.first
+    @articles = Article.all
 
-    # This action will render the home page of the application.
-    # You can add any logic here if needed.
   end
-  def about
+  def show
+    @article = Article.find(params[:id])
   end
+
 end
