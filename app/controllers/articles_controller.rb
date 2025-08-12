@@ -16,8 +16,22 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to article_path(@article), notice: '保存できたよ'
     else 
-      render :new
+      render :new, status: :unprocessable_entity
     end
+  end
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: '更新できました'
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :edit, status: :unprocessable_entity
+    end
+    
   end
 
   private
