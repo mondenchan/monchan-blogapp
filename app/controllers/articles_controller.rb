@@ -2,10 +2,12 @@ class ArticlesController < ApplicationController
 
   before_action :set_article, only: [:show, :edit, :update]
   def index
+
     @articles = Article.all
   end
 
   def show
+        binding.pry
   end
 
   def new
