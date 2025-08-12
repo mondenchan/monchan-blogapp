@@ -15,7 +15,7 @@
     <div class="card_image">
       <%= image_tag 'eyecatch1.png' %>
     </div>
-    <div class="card_content">
+    < class="card_content">
      <div class="card_title">
           <%= article.title %>
     </div>
@@ -34,4 +34,10 @@
   </div>
   <% end %>
   <% end %>
+
+<%= link_to new_article_path do %>
+<div class="float_btn">
+<i class="fa fa-plus"></i>
+</div>
+<% end %>
 </div>
