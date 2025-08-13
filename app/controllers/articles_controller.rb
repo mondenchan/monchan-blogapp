@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
-
-  before_action :set_article, only: [:show, :edit, :update]
+  before_action :set_article, only: [ :show, :edit, :update ]
   def index
     @articles = Article.all
   end
 
   def show
+        binding.pry
   end
 
   def new
@@ -22,7 +22,6 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -46,6 +45,6 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-    @article = Article.find(params[:id]) 
+    @article = Article.find(params[:id])
   end
 end
