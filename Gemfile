@@ -64,6 +64,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'haml-rails', '~> 2.0'
+  gem 'haml-rails', '~> 3.0'
   gem 'html2haml'
 end
